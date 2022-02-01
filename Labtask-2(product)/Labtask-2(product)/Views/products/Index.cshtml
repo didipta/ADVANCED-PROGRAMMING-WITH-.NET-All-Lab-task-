@@ -1,0 +1,22 @@
+﻿@model List<Labtask_2_product_.Models.products>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Productlayout.cshtml";
+}
+<div style="padding: 50px;">
+    @foreach (var item in Model)
+    {
+        <div class="card" style="width:200px; float:left; margin:30px">
+            <img src="https://image.shutterstock.com/image-vector/new-product-banner-template-ribbon-260nw-1726796095.jpg" style="width:100px">
+            <div class="card-body">
+                <h3 class="card-title">@item.name</h3>
+                <h5 class="card-title">@item.id</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+
+    }
+
+</div>
+
