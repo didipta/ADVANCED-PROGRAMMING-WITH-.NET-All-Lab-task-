@@ -40,7 +40,9 @@ namespace Labtask_3.Controllers
             StudentEntities1 ss = new StudentEntities1();
             var datas = ss.Students.ToList();
             String year = DateTime.Now.Year.ToString();
-            var data = (from s in datas where (int.Parse(year)-int.Parse(s.dob.Substring(s.dob.Length-4)))> 40 select s);
+            var data = (from s in datas where (int.Parse(year)-int.Parse(s.dob.Substring(s.dob.Length-4)))> 40 &&
+                        float.Parse(s.cgpa) > 3.50
+                        select s);
  
             ViewBag.name = data;
             return View();
