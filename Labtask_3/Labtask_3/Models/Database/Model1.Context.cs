@@ -13,10 +13,10 @@ namespace Labtask_3.Models.Database
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class StudentEntities1 : DbContext
+    public partial class StudentEntities : DbContext
     {
-        public StudentEntities1()
-            : base("name=StudentEntities1")
+        public StudentEntities()
+            : base("name=StudentEntities")
         {
         }
     
@@ -25,6 +25,7 @@ namespace Labtask_3.Models.Database
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Department> Departments { get; set; }
         public virtual DbSet<Student> Students { get; set; }
     }
 }
