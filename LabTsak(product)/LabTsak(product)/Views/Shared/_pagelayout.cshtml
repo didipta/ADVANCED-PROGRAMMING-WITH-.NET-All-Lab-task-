@@ -1,0 +1,37 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title - product</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/product/Home">Home</a></li>
+                    <li><a href="/Product/AllproducttList">Products List</a></li>
+                    <li><a href="/Product/Allproduct">Products</a></li>
+                    <li><a href="/Product/myorder">Allshow</a></li>
+                    <li><a href="/Product/Myallorder">Myallorder</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div>
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year -Dipta saha</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Showdetails";
+    Layout = "~/Views/Shared/_pagelayout.cshtml";
+}
+
+<h2>Showdetails</h2>
+<table class="table table-bordered">
+    <tr>
+
+        <th>Product Name</th>
+        <th>Product Quantity</th>
+        <th>Product Price</th>
+    </tr>
+    @foreach (var b in Model)
+    {
+        <tr style="padding:50px;">
+            <td>@b.p_name</td>
+            <td>@b.p_qty</td>
+            <td>@b.p_price</td>
+            
+        </tr>
+    }
+</table>
+

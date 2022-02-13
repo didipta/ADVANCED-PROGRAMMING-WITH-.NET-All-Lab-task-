@@ -66,6 +66,7 @@ namespace Labtask_3.Controllers
             return View(students);
         }
         [HttpPost]
+        
         public ActionResult Edit(Student edit)
         {
             StudentEntities ss = new StudentEntities();

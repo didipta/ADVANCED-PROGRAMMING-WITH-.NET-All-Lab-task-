@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "AllProducttList";
+    Layout = "~/Views/Shared/_pagelayout.cshtml";
+}
+
+<h2>AllProducttList</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Product Name</th>
+        <th>Product Price</th>
+        <th>Product Qty</th>
+        <th></th>
+        <th></th>
+    </tr>
+    @foreach (var b in Model)
+    {
+        <tr>
+            <td>@b.id</td>
+            <td>@b.name</td>
+            <td>@b.price</td>
+            <td>@b.qty</td>
+            <td><img src="~/Content/image/@b.img" style="width:100px; height:80px; margin:10px;"/></td>
+            <td><a href="/student/Edit/@b.id" class="btn btn-success">Edit</a></td>
+            <td><a href="/student/Delete/@b.id" class="btn btn-danger">Delete</a></td>
+        </tr>
+    }
+
+
+</table>
